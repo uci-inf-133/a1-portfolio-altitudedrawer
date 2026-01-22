@@ -245,6 +245,23 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Breadcrumb links */
+.breadcrumb a {
+  color: var(--seafoam-700);
+}
+
+.breadcrumb a:visited {
+  color: var(--seafoam-700);
+}
+
+.breadcrumb a:hover {
+  color: var(--seafoam-900);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(7, 19, 19, 0.55);
+}
+
 /* Embedded PDFs look intentional */
 object[type="application/pdf"] {
   border-radius: 1rem;
