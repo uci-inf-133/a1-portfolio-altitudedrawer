@@ -182,6 +182,26 @@ h1, .h1 { letter-spacing: -0.03em; }
   --bs-table-accent-bg: rgba(141, 225, 220, 0.22);
 }
 
+/* Prettier Skills table (About page) */
+.skills-table caption {
+  font-weight: 600;
+}
+
+.skills-table thead th {
+  background: linear-gradient(135deg, rgba(0, 183, 169, 0.18), rgba(57, 214, 200, 0.10));
+  border-bottom: 1px solid rgba(7, 19, 19, 0.10);
+}
+
+.skills-table tbody td,
+.skills-table tbody th {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.skills-table tbody tr:hover > * {
+  background-color: rgba(0, 183, 169, 0.08) !important;
+}
+
 /* Forms */
 .form-control, .form-select {
   border-radius: 0.95rem;
