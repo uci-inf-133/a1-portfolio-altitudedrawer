@@ -182,24 +182,46 @@ h1, .h1 { letter-spacing: -0.03em; }
   --bs-table-accent-bg: rgba(141, 225, 220, 0.22);
 }
 
-/* Prettier Skills table (About page) */
+/* Prettier Skills table (About page) — lighter + high contrast */
+.skills-table {
+  /* Override Bootstrap table CSS vars for this table only */
+  --bs-table-bg: #ffffff;
+  --bs-table-color: var(--ink-900);
+  --bs-table-striped-bg: rgba(0, 183, 169, 0.05);
+  --bs-table-striped-color: var(--ink-900);
+  --bs-table-hover-bg: rgba(0, 183, 169, 0.07);
+  --bs-table-hover-color: var(--ink-900);
+  --bs-table-border-color: rgba(7, 19, 19, 0.10);
+}
+
 .skills-table caption {
   font-weight: 600;
 }
 
+/* Apply the gradient to the whole header row (not each cell) to avoid visible seams */
+.skills-table thead {
+  background: linear-gradient(135deg, rgba(0, 183, 169, 0.10), rgba(57, 214, 200, 0.06));
+}
+
 .skills-table thead th {
-  background: linear-gradient(135deg, rgba(0, 183, 169, 0.18), rgba(57, 214, 200, 0.10));
-  border-bottom: 1px solid rgba(7, 19, 19, 0.10);
+  background: transparent; /* prevents per-column hard transitions */
+  color: var(--ink-900);
+  border-bottom: 1px solid rgba(7, 19, 19, 0.12);
+}
+
+/* Gentle separators between header columns */
+.skills-table thead th + th {
+  border-left: 1px solid rgba(7, 19, 19, 0.06);
 }
 
 .skills-table tbody td,
 .skills-table tbody th {
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
 }
 
 .skills-table tbody tr:hover > * {
-  background-color: rgba(0, 183, 169, 0.08) !important;
+  background-color: rgba(0, 183, 169, 0.07) !important;
 }
 
 /* Forms */
