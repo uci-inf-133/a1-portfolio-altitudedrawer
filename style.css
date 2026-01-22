@@ -49,7 +49,6 @@ body {
     var(--bs-body-bg);
 }
 
-/* Typography that feels less “Bootstrap” */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--heading-font);
@@ -57,6 +56,11 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 { letter-spacing: -0.03em; }
+
+h1, .h1,
+h2, .h2 {
+  color: var(--seafoam-900);
+}
 
 .lead {
   color: rgba(7, 19, 19, 0.78);
