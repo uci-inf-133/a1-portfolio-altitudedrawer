@@ -206,6 +206,7 @@ h2, .h2 {
 }
 
 .skills-table thead th {
+  background: linear-gradient(90deg, var(--seafoam-400), var(--seafoam-700));
   border-bottom: 1px solid rgba(7, 19, 19, 0.12);
 }
 
