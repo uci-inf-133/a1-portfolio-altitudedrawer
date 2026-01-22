@@ -13,12 +13,20 @@ EMAIL: zongzel3@uci.edu
   <meta name="author" content="Zongze Li">
   <meta name="description" content="Portfolio of Zongze Li — projects, experience, and contact.">
 
-  <link rel="stylesheet" href="style.css">
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <title>Zongze Li | Portfolio</title>
 </head>
+
+<!-- Add Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Set current year in footer
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("year").textContent = new Date().getFullYear();
+  });
+</script>
 
 <body>
   <header class="site-header">
@@ -28,45 +36,149 @@ EMAIL: zongzel3@uci.edu
       <h1>Zongze Li</h1>
       <p>CS & Intelligent Systems @ UCI. Interested in ...</p>
 
-      <nav aria-label="Primary">
-        <ul class="nav">
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <a class="visually-hidden-focusable" href="#main">Skip to content</a>
+
+      <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="#">Zongze Li</a>
+
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#primaryNav"
+                  aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="primaryNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section id="projects">
-      <h2>Projects</h2>
+  <main id="main" class="container py-5">
 
-      <article class="card">
-        <h3>Project Title</h3>
-        <p>1–2 sentence description.</p>
-        <p>
-          <a href="https://github.com/..." target="_blank" rel="noreferrer">GitHub</a>
+    <!-- Hero -->
+    <section class="row align-items-center g-4 mb-5">
+      <div class="col-12 col-md-8">
+        <h1 class="display-6 fw-semibold mb-2">Hi, I’m Zongze.</h1>
+        <p class="lead mb-3">
+          CS & Intelligent Systems @ UCI. I build usable systems and care about design + clarity.
         </p>
-      </article>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-outline-secondary" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <img class="img-fluid rounded-circle shadow-sm"
+            src="images/your-photo.jpg"
+            alt="Portrait of Zongze Li"
+            width="240" height="240">
+      </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Short bio…</p>
-      <img src="images/your-photo.jpg" alt="Portrait of Zongze Li" width="240">
+    <!-- Projects -->
+    <section id="projects" class="mb-5">
+      <h2 class="h3 fw-semibold mb-3">Projects</h2>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 card-title">WebSOC / WebReg Redesign</h3>
+              <p class="card-text">
+                HCI project redesigning course registration flow with persona-driven UI and prototypes.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://github.com/..."
+                target="_blank" rel="noreferrer noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 card-title">SVHN Digit Recognition</h3>
+              <p class="card-text">
+                CNN model exploration with hyperparameter sweeps and evaluation metrics.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://github.com/..."
+                target="_blank" rel="noreferrer noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 card-title">NeRF-Style Radiance Fields</h3>
+              <p class="card-text">
+                Replication of a NeRF-style pipeline using positional encoding and neural rendering.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://github.com/..."
+                target="_blank" rel="noreferrer noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:zongzel3@uci.edu">zongzel3@uci.edu</a></p>
+    <!-- About -->
+    <section id="about" class="mb-5">
+      <h2 class="h3 fw-semibold mb-3">About</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <p>
+            Write a short bio here: what you’re studying, what you like building, and what kinds of roles you want.
+          </p>
+          <ul>
+            <li>Interest: HCI + applied ML</li>
+            <li>Tools: Python, HTML/CSS, Git</li>
+            <li>Focus: accessibility and clear UX</li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="p-3 border rounded-3 bg-body-tertiary">
+            <h3 class="h6 fw-semibold">Links</h3>
+            <ul class="list-unstyled mb-0">
+              <li><a href="https://github.com/..." target="_blank" rel="noreferrer noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/..." target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer class="site-footer">
+    <!-- Contact (simple, accessible “advanced” option too) -->
+    <section id="contact" class="mb-5">
+      <h2 class="h3 fw-semibold mb-3">Contact</h2>
       <p>
+        Email: <a href="mailto:zongzel3@uci.edu">zongzel3@uci.edu</a>
+      </p>
+    </section>
+
+    <footer class="pt-4 border-top">
+      <p class="mb-1">
         <a href="http://validator.w3.org/check?uri=referer">W3C validator</a>
       </p>
+      <p class="text-body-secondary mb-0">© <span id="year"></span> Zongze Li</p>
     </footer>
+
   </main>
 </body>
 
