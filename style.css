@@ -206,7 +206,6 @@ h2, .h2 {
 }
 
 .skills-table thead th {
-  background: transparent; /* prevents per-column hard transitions */
   color: var(----seafoam-800);
   border-bottom: 1px solid rgba(7, 19, 19, 0.12);
 }
