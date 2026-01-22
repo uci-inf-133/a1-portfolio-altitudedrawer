@@ -182,7 +182,7 @@ h1, .h1 { letter-spacing: -0.03em; }
   --bs-table-accent-bg: rgba(141, 225, 220, 0.22);
 }
 
-/* Prettier Skills table (About page) — lighter + high contrast */
+/* Skills table (About page) */
 .skills-table {
   /* Override Bootstrap table CSS vars for this table only */
   --bs-table-bg: #ffffff;
