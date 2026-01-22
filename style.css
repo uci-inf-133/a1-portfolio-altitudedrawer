@@ -206,7 +206,8 @@ h2, .h2 {
 }
 
 .skills-table thead th {
-  background: var(--seafoam-700);
+  background: transparent; /* prevents per-column hard transitions */
+  color: var(--seafoam-900);
   border-bottom: 1px solid rgba(7, 19, 19, 0.12);
 }
 
@@ -238,10 +239,12 @@ h2, .h2 {
 
 /* Links */
 a {
+  color: var(--seafoam-700);
   text-underline-offset: 0.18em;
 }
 
 a:hover {
+  color: var(--seafoam-900);
   text-decoration: underline;
 }
 
@@ -273,4 +276,12 @@ object[type="application/pdf"] {
 /* Footer subtle separation */
 footer {
   color: rgba(7, 19, 19, 0.70);
+}
+
+footer a {
+  font-weight: 600;
+}
+
+footer a:visited {
+  color: var(--seafoam-700);
 }
