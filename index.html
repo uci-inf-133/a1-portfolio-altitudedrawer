@@ -2,8 +2,13 @@
 <html lang="en">
 
 <!--
-WRITTEN BY: Zongze Li
-EMAIL: zongzel3@uci.edu
+  WRITTEN BY: Zongze Li
+  EMAIL: zongzel3@uci.edu
+
+  NOTES:
+  - This is the Home page (index.html) for the INF 133 A1 portfolio site.
+  - Bootstrap provides the base layout + components; style.css applies a custom seafoam theme.
+  - Navigation links connect this page to the About / Portfolio / Contact pages.
 -->
 
 <head>
@@ -13,9 +18,12 @@ EMAIL: zongzel3@uci.edu
   <meta name="author" content="Zongze Li">
   <meta name="description" content="Portfolio of Zongze Li — projects, experience, and contact.">
 
+  <!-- Bootstrap CSS (base components + responsive grid) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom site styling (seafoam theme overrides + typography + component polish) -->
   <link rel="stylesheet" href="style.css">
   
+  <!-- Modern web fonts (2020s styling) used by style.css -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -24,10 +32,13 @@ EMAIL: zongzel3@uci.edu
 </head>
 
 <body>
+  <!-- Site header + primary navigation (consistent across pages) -->
   <header class="site-header">
+    <!-- Skip link improves accessibility by letting keyboard users jump to main content -->
     <a class="visually-hidden-focusable" href="#main">Skip to content</a>
 
     <div class="container">
+      <!-- Responsive navbar: collapses on small screens, expands on medium+ screens -->
       <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom">
         <div class="container">
           <a class="navbar-brand fw-semibold" href="index.html">Zongze Li</a>
@@ -38,6 +49,7 @@ EMAIL: zongzel3@uci.edu
             <span class="navbar-toggler-icon"></span>
           </button>
 
+          <!-- Primary navigation links (multiple pages requirement) -->
           <div class="collapse navbar-collapse" id="primaryNav">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
@@ -51,15 +63,17 @@ EMAIL: zongzel3@uci.edu
     </div>
   </header>
 
+  <!-- Main content (skip-link target for keyboard / screen reader users) -->
   <main id="main" class="container py-5">
 
-    <!-- Hero -->
+    <!-- Hero section: short introduction + primary call-to-action buttons + portrait image -->
     <section class="row align-items-center g-4 mb-5">
       <div class="col-12 col-md-8">
         <h2 class="display-6 fw-semibold mb-2">Hi, I’m Zongze.</h2>
         <p class="lead mb-3">
           CS & Intelligent Systems @ UCI. I build usable systems and care about design + clarity.
         </p>
+        <!-- Calls to action: primary button (portfolio) + secondary button (contact) -->
         <div class="d-flex flex-wrap gap-2">
           <a class="btn btn-primary" href="portfolio.html">View portfolio</a>
           <a class="btn btn-outline-secondary" href="contact.html">Contact</a>
@@ -67,6 +81,7 @@ EMAIL: zongzel3@uci.edu
       </div>
 
       <div class="col-12 col-md-4 text-center">
+        <!-- Portrait image with descriptive alt text (image requirement) -->
         <img class="img-fluid rounded-3 border shadow-sm"
             src="images/portrait.JPG"
             alt="Portrait of Zongze Li"
@@ -74,12 +89,14 @@ EMAIL: zongzel3@uci.edu
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Featured projects: quick preview cards that link to project detail pages -->
     <section id="projects" class="mb-5">
       <h2 class="h3 fw-semibold mb-3">Featured Projects</h2>
 
+      <!-- Bootstrap grid for responsive card layout -->
       <div class="row g-4">
         <div class="col-12 col-md-6">
+          <!-- Project card: title + short description + internal link to the project page -->
           <article class="card h-100 shadow-sm">
             <div class="card-body">
               <h3 class="h5 card-title">WebSOC / WebReg Redesign</h3>
@@ -94,6 +111,7 @@ EMAIL: zongzel3@uci.edu
         </div>
 
         <div class="col-12 col-md-6">
+          <!-- Project card: title + short description + internal link to the project page -->
           <article class="card h-100 shadow-sm">
             <div class="card-body">
               <h3 class="h5 card-title">SVHN Digit Recognition</h3>
@@ -107,21 +125,33 @@ EMAIL: zongzel3@uci.edu
           </article>
         </div>
       </div>
+      <!-- Link to the full portfolio page with all projects -->
       <div class="mt-4">
         <a class="btn btn-outline-primary" href="portfolio.html">See all projects</a>
       </div>
     </section>
 
     <footer class="pt-4 border-top">
+      <!-- Validator link helps confirm valid HTML (course requirement / best practice) -->
       <p class="mb-1">
         <a href="http://validator.w3.org/check?uri=referer">W3C validator</a>
       </p>
+      <p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+              src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+              alt="Valid CSS!" />
+      </a>
+</p>
+        
       <p class="text-body-secondary mb-0">© <span id="year"></span> Zongze Li</p>
     </footer>
 
   </main>
 
+  <!-- Bootstrap JS bundle enables navbar toggling on small screens -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Small enhancement: automatically updates the copyright year -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
